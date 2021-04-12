@@ -1,7 +1,7 @@
 {
-  "name": "react-spa-blank",
-  "version": "0.1.0",
-  "description": "initial blank for creating React SPA (based on HTMLAcademy examples https://htmlacademy.ru/)",
+  "name": "nyamushka",
+  "version": "1.0.0",
+  "description": "Test project for FunBox",
   "main": "index.js",
   "scripts": {
     "eslint": "eslint --ext .jsx --ext .js src/",
@@ -38,5 +38,13 @@
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eggofevil/nyamushka.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eggofevil/nyamushka/issues"
+  },
+  "homepage": "https://github.com/eggofevil/nyamushka#readme"
 }
