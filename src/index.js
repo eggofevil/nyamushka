@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import './index.css';
+import App from './components/app/app.jsx';
 
 ReactDOM.render(
-  <div className="react-spa-blank">React SPA blank</div>,
+  <App />,
   document.getElementById(`root`)
 );

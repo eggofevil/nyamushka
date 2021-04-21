@@ -1,0 +1,19 @@
+// @font-face mixin.
+.font-face(@family, @filename: @family, @weight: normal, @style: normal, @altnames) {
+  @font-face {
+    font-family: @family;
+    font-style: @style;
+    font-weight: @weight;
+    src: local("@{filename}"), .map-altnames(@altnames);
+    ;
+
+
+    src: url("../fonts/@{filename}.woff") format("woff");
+  }
+}
+
+//
+.map-altnames(@names, @i: 1) when (@i <= length(@names)) {
+  src: local(extract(@names, @i));
+  .map-altnames(@names, @i + 1);
+}

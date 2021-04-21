@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: lighter;
+  src: local("Exo 2.0 Thin"), local("Exo2.0-Thin"), local("Exo2-Thin"), local("Exo2 Thin");
+  src: url("../fonts/Exo2-Thin.woff2") format("woff2");
+  src: url("../fonts/Exo2-Thin.woff") format("woff");
+  src: url("../fonts/Exo2-Thin.ttf") format("ttf");
+  src: url("../fonts/Exo2-Thin.eot") format("eot");
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.hidden {
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  position: absolute;
+  width: 1px;
+}
+.display-none {
+  display: none;
+}
+@media (min-width: 720px) and (min-height: 1152px),
+(min-width: 1152px) and (min-aspect-ratio: 1/1) {
+  html {
+    height: 100%;
+  }
+}
+body {
+  align-items: center;
+  background-image: url(../img/pattern.jpg);
+  background-position: 20px 4px;
+  box-sizing: border-box;
+  color: #fff;
+  display: flex;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  justify-content: center;
+}
+@media (min-width: 720px) and (min-height: 1152px),
+(min-width: 1152px) and (min-aspect-ratio: 1/1) {
+  body {
+    height: 100%;
+  }
+}
+@media (min-width: 720px) {
+  .main {
+    height: 1152px;
+    width: 720px;
+  }
+}
+@media (min-width: 1152px) and (min-aspect-ratio: 1/1) {
+  .main {
+    height: 680px;
+    width: 1280px;
+  }
+}

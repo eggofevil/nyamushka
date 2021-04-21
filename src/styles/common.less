@@ -1,0 +1,45 @@
+@import "mixins";
+
+@tablet-width: 720px;
+@desktop-width: 1152px;
+@tablet-mapping: ~"(min-width: @{tablet-width})";
+@desktop-mapping: ~"(min-width: @{desktop-width}) and (min-aspect-ratio: 1/1)";
+
+@font-alt-names: "Exo 2 Thin", "Exo 2.0 Thin", "Exo2.0-Thin";
+.font-face("Exo 2", "Exo2-Thin", lighter, normal, @font-alt-names);
+
+.hidden {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+.display-none {
+  display: none;
+}
+html {
+  @media @tablet-mapping and (min-height: 1152px), @desktop-mapping {
+    height: 100%;
+  }
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  color: #ffffff;
+  background-image: url("../img/pattern.jpg");
+  background-position: 20px 4px;
+  @media @tablet-mapping and (min-height: 1152px), @desktop-mapping {
+    height: 100%;
+  }
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

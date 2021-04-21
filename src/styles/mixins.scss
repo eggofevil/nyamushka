@@ -1,0 +1,27 @@
+// @font-face mixin.
+
+@mixin font-face($family, $fileName, $style: normal, $weight: normal, $localNames: null) {
+  $font-formats: 'woff2', 'woff', 'ttf', 'eot';
+  @font-face {
+    font-family: $family;
+    font-style: $style;
+    font-weight: $weight;
+    @if ($localNames) {
+      $src: null;
+      @each $name in $localNames {
+        $src: $src+#{if($src, ',', '') local($name)};
+      }
+      src: $src;
+    }
+    src: url(quote($fileName+'.eot'));
+    $src: url(quote($fileName+'.eot?#iefix')) format('embedded-opentype');
+    @each $format in $fontFormats {
+      $src: $src+#{','url(quote($fileName))format($format)};
+    }
+    src: $src;
+  }
+}
+
+@mixin my-mixin() {
+
+}
